@@ -19,6 +19,11 @@ app.use(express.json())
 // Enable cors
 app.use(cors())
 
+// serving static files
+// app.use(express.static('public'))
+app.use(express.static('public'))
+app.use(express.static('files'))
+
 // Routes
 app.use('/api/v1/stores', require('./routes/stores'))
 
