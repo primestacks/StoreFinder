@@ -3,5 +3,5 @@
 // @access Public, since there are no authentications 
 
 exports.getStores = (req, res, next)=>{
-    res.send('Welcome to Node API store locator')
+    res.send("<h1>Welcome to Store Finder</h1>")
 }
