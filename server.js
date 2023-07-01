@@ -2,7 +2,7 @@ const path = require('path');
 const dotenv = require('dotenv');
 const express = require('express');
 const cors = require('cors'); 
-const connectDb = require('./config/db')
+const connectDb = require('./config/db');
 
 // Loading global variables
 dotenv.config({path: './config/config.env'});
@@ -21,7 +21,7 @@ app.use(express.static('public'))
 app.use(express.static('files'))
 
 // Routes
-app.use('/api/v1/', require('./routes/stores'))
+app.use('/api/v1/stores', require('./routes/stores'))
 // app.use('/api/v1/about', require('./routes/stores'))
 // initiazing port and listening on port
 
