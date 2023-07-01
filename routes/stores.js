@@ -1,17 +1,14 @@
 const express = require('express');
 const router = express.Router();
-const {getStores, aboutInfo} = require('../controllers/stores');
+const {getStores, addStore} = require('../controllers/stores');
 
 // impoting stores from controller
 // const {getStores} = require('../controllers/stores')
 
-// Routes
-router.route('/').get(getStores);
-router.route('/about').get(aboutInfo);
-
-router.get('/stores', (req, res)=>{
-    res.send('All stores to pick from  @StoreFinder')
-})
+// Routes (retreive all stores and to add a new store)
+router.route('/')
+.get(getStores)
+.post(addStore)
 
 // Random Ids
 // const storeIds = [1232, 34232, 45343, 54432, 532, 4231];
