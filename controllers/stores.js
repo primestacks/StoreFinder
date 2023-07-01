@@ -3,5 +3,10 @@
 // @access Public, since there are no authentications 
 
 exports.getStores = (req, res, next)=>{
-    res.send("<h1>Welcome to Store Finder</h1>")
+    res.send("This is comming from controllers module")
+}
+
+// about route
+exports.aboutInfo = (req, res, next)=>{
+    res.send("Blog page")
 }

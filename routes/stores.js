@@ -1,14 +1,25 @@
-const express = require('express')
-const Router = express.Router();
+const express = require('express');
+const router = express.Router();
+const {getStores, aboutInfo} = require('../controllers/stores');
 
 // impoting stores from controller
-const {getStores} = require('../controllers/stores')
+// const {getStores} = require('../controllers/stores')
 
 // Routes
-Router.route('/').get(getStores)
+router.route('/').get(getStores);
+router.route('/about').get(aboutInfo);
 
-// Router.get('/', (req, res)=>{
-//     res.send('Welcome to Node API store locator')
-// })
+router.get('/stores', (req, res)=>{
+    res.send('All stores to pick from  @StoreFinder')
+})
 
-module.exports = Router;
+// Random Ids
+// const storeIds = [1232, 34232, 45343, 54432, 532, 4231];
+
+// function randomID(storeID){
+//     const getRandom = Math.floor(Math.random() * storeID.length );
+//     const randomID = storeID[getRandom];
+//     return randomID;
+// }
+
+module.exports = router;
