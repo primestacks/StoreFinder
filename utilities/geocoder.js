@@ -9,8 +9,4 @@ const options = {
 
 const geocoder = NodeGeocoder(options);
 
-// geocoder.geocode('29 first-mechanic road port harcourt, Nigeria', function(err, res) {
-//     console.log(res);
-// });
-
 module.exports = geocoder;
